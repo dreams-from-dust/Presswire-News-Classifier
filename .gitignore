@@ -1,0 +1,11 @@
+# Python environment
+venv/
+
+# Cache files
+__pycache__/
+
+# OS metadata
+.DS_Store
+
+# IDE specific
+.vscode/
