@@ -149,7 +149,7 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
   background-color: #09090b !important;
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: 12px !important;
-  padding: 24px !important;
+  padding: 34px !important;
   margin-bottom: 24px !important;
   box-shadow: none !important;
   transition: border-color 0.2s ease !important;
@@ -164,7 +164,7 @@ div[data-testid="stVerticalBlockBorderWrapper"]:hover {
   box-shadow: none !important;
   padding: 0 !important;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 1rem !important;
 }
 
 .obsidian-logo-box {
@@ -1037,7 +1037,7 @@ with tab_single:
                 st.markdown(clean_html(render_softmax_logits(last_res)), unsafe_allow_html=True)
             else:
                 st.markdown(clean_html("""
-                <div style="text-align: center; padding: 75px 0; border: 1px dashed rgba(255, 255, 255, 0.08); border-radius: 8px; background-color: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+                <div style="text-align: center; padding: 75px 0; border: 1px dashed rgba(255, 255, 255, 0.08); border-radius: 8px; background-color: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; margin-bottom:30px;">
                     <div style="color: #a855f7; font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; letter-spacing: 1.5px;">STANDBY</div>
                     <div style="color: #ffffff; font-size: 14.5px; font-weight: 600;">System Ready for Classification</div>
                     <p style="color: #71717a; font-size: 13px; margin-bottom: 0; max-width: 280px; text-align: center; line-height: 1.4;">Submit a sequence headline on the left to compute softmax metrics.</p>
@@ -1140,7 +1140,7 @@ with tab_batch:
                 st.download_button(label="EXPORT REPORT (CSV)", data=batch_csv_buffer.getvalue(), file_name="presswire_batch_report.csv", mime="text/csv")
             else:
                 st.markdown(clean_html("""
-                <div style="text-align: center; padding: 75px 0; border: 1px dashed rgba(255, 255, 255, 0.08); border-radius: 8px; background-color: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+                <div style="text-align: center; padding: 75px 0; border: 1px dashed rgba(255, 255, 255, 0.08); border-radius: 8px; background-color: #030303; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; margin-bottom:30px;">
                     <div style="color: #10b981; font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 700; letter-spacing: 1.5px;">IDLE</div>
                     <div style="color: #ffffff; font-size: 14.5px; font-weight: 600;">Reports Engine Standby</div>
                     <p style="color: #71717a; font-size: 13px; margin-bottom: 0; max-width: 280px; text-align: center; line-height: 1.4;">Compile batch inputs to review comprehensive metrics reports.</p>
@@ -1243,7 +1243,7 @@ with tab_telemetry:
 
         with st.container(border=True):
             st.markdown(clean_html("""
-            <div class="badge badge-purple">ARCHITECTURE_SPECS</div>
+            <div class="badge badge-purple ">ARCHITECTURE_SPECS</div>
             <h2 style="font-size: 16px; font-weight: 700; color: #ffffff; margin-top: 4px; margin-bottom: 8px;">Fine-Tuning Architecture Details</h2>
             <p style="color: #71717a; font-size: 12.5px; margin-bottom: 12px; line-height: 1.5;">Base Weights and Transformer Hyperparameter details.</p>
             <ul style="color: #ffffff; padding-left: 20px; font-size: 12.5px; line-height: 1.6; margin-bottom: 0;">

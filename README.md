@@ -1,10 +1,10 @@
 # Presswire - Obsidian Intelligence
 
-Presswire is a high-performance news topic classification application. It uses a fine-tuned BERT model to categorize news headlines into four distinct categories: World, Sports, Business, and Sci/Tech.
+Presswire is a high-performance news topic classification application. It uses a fine tuned BERT model to categorize news headlines into four distinct categories: World, Sports, Business, and Sci/Tech.
 
 ## Project Overview
 
-This project implements a complete NLP pipeline, covering data acquisition, transformer fine-tuning, and a professional-grade deployment using Streamlit with a custom "Obsidian Black" UI.
+This project implements a complete NLP pipeline, covering data acquisition, transformer fine tuning, and a professional grade deployment using Streamlit with a custom "Obsidian Black" UI.
 
 ## Prerequisites
 
@@ -28,22 +28,22 @@ pip install -r requirements.txt
 
 ### 1. Data Preparation & Training
 
-The `train.py` script automates the full training lifecycle.
+The `train.py` script automates the full training lifecycle. Running this script for the first time will generate the necessary data, results, and model artifacts locally.
 
 ```bash
 python train.py
 ```
 
-#### Process:
+#### Process
 
-- **Downloads:** Fetches the AG News dataset in Parquet format.
-- **Tokenizes:** Preprocesses the text data using BertTokenizer.
+- **Downloads:** Fetches the AG News dataset.
+- **Tokenizes:** Preprocesses text data using `BertTokenizer`.
 - **Fine-Tunes:** Trains the `bert-base-uncased` model using the Hugging Face Trainer API.
-- **Saves:** Exports the fine-tuned model, tokenizer, and configuration files to the `./fine_tuned_bert` directory.
+- **Saves:** Exports the fine-tuned model and configuration to the `./fine_tuned_bert` directory.
 
 ### 2. Launching the Application
 
-Once the model directory is created, launch the interactive dashboard:
+Once the training process is complete, launch the interactive dashboard:
 
 ```bash
 streamlit run app.py
@@ -53,12 +53,18 @@ The application will open in your default browser (usually at `http://localhost:
 
 ## Project Structure
 
-- `app.py`: The main Streamlit dashboard application with custom CSS.
+- `app.py`: The main Streamlit dashboard application.
 - `train.py`: Training script for fine-tuning BERT.
 - `requirements.txt`: Project dependency list.
-- `./fine_tuned_bert/`: Directory containing the trained model.
-- `./data/`: Dataset storage (tracked via Git LFS).
-- `./results/`: Training checkpoints and logs (tracked via Git LFS).
+- `./fine_tuned_bert/`: (Generated) Directory containing the trained model.
+- `./data/`: (Generated) Local storage for the dataset.
+- `./results/`: (Generated) Training checkpoints and logs.
+
+### Note on Model Files
+
+To maintain a lightweight repository, training artifacts and datasets are automatically generated when you run `train.py`.
+
+If you prefer to skip the training process, you may download the pre-trained weights from **[Link to Google Drive]** and place them in the `./fine_tuned_bert/` folder.
 
 ## Skills Gained
 

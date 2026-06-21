@@ -1,3 +1,0 @@
-data/* filter=lfs diff=lfs merge=lfs -text
-results/* filter=lfs diff=lfs merge=lfs -text
-fine_tuned_bert/* filter=lfs diff=lfs merge=lfs -text
